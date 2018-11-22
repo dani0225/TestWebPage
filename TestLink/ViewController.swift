@@ -7,13 +7,15 @@
 //
 
 import UIKit
+import WebKit
 
 class ViewController: UIViewController {
     
     
     @IBOutlet weak var textFieldOutlet: UITextField!
     
-
+    @IBOutlet weak var myWebView: WKWebView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,7 +27,8 @@ class ViewController: UIViewController {
         if let userInsertedLink = textFieldOutlet.text {
             guard let url = URL(string: userInsertedLink) else { return }
             if UIApplication.shared.canOpenURL(url) {
-                UIApplication.shared.open(url)
+                let urlRequest:URLRequest = URLRequest(url: url)
+                myWebView.load(urlRequest)
             }
             else {
                 let alert = UIAlertController(title: "Error", message: "Please enter a valid URL.", preferredStyle: UIAlertController.Style.alert)
