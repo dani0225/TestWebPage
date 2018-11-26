@@ -38,6 +38,10 @@
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="jhv-BZ-IBp">
+                                <rect key="frame" x="177.5" y="323.5" width="20" height="20"/>
+                                <color key="backgroundColor" red="0.45009386540000001" green="0.98132258650000004" blue="0.4743030667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -46,14 +50,17 @@
                             <constraint firstItem="5Uj-ti-QYe" firstAttribute="top" secondItem="P0r-r7-RuV" secondAttribute="bottom" constant="20" id="A71-nM-Su8"/>
                             <constraint firstItem="5Uj-ti-QYe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="Fo4-wW-9Hm"/>
                             <constraint firstItem="P0r-r7-RuV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="L1R-82-mwh"/>
+                            <constraint firstItem="jhv-BZ-IBp" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="OYj-M5-YAc"/>
                             <constraint firstItem="6Kl-1A-P6w" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="PJH-sL-Y6Q"/>
                             <constraint firstItem="6Kl-1A-P6w" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="YBe-Sl-DUA"/>
                             <constraint firstItem="6Kl-1A-P6w" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="bZt-fu-Zyt"/>
+                            <constraint firstItem="jhv-BZ-IBp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dTe-4N-g6k"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5Uj-ti-QYe" secondAttribute="trailing" constant="8" id="hdg-qr-o8R"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="myActivityIndicator" destination="jhv-BZ-IBp" id="rBR-73-CmB"/>
                         <outlet property="myWebView" destination="6Kl-1A-P6w" id="rrz-P7-iJU"/>
                         <outlet property="textFieldOutlet" destination="5Uj-ti-QYe" id="gX5-wc-ZPH"/>
                     </connections>
